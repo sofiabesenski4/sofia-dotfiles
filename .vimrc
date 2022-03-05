@@ -15,9 +15,9 @@ set termguicolors
 
 syntax on
 " this colour scheme is installed from lifepillar
-colorscheme solarized8
+" colorscheme solarized8
 " This is an option for the color scheme
-set background=light
+" set background=light
 " set highlight-search
 set hlsearch
 " search as you type

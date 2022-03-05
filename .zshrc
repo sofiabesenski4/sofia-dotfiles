@@ -45,3 +45,5 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 ulimit -n 10240
 unsetopt BEEP
 alias config='/usr/bin/git --git-dir=/Users/sofiabesenski/.cfg/ --work-tree=/Users/sofiabesenski'
+
+eval "$(direnv hook zsh)"
