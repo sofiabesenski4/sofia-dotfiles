@@ -8,6 +8,7 @@ call plug#begin()
 	Plug 'junegunn/fzf.vim'
 	Plug 'lifepillar/vim-solarized8'
 	Plug 'tpope/vim-sensible'
+  Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Tells vim to use truecolors
@@ -53,5 +54,3 @@ function! SetSystemClipboard()
 endfunction
 
 call SetSystemClipboard()
-
-set number

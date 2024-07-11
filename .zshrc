@@ -12,11 +12,9 @@ source /usr/local/share/chruby/chruby.sh
 # eval "$(rbenv init -)"
 # eval "$(fnm env)"
 export warnflags=-Wno-error=implicit-function-declaration
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-export STITCH_LOCAL_PATH="~/Code/solidus_stitch"
 autoload -Uz compinit && compinit
 
 # #to set the array indexing to 0, as expected
@@ -40,10 +38,19 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 export EDITOR=vim
-export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 ulimit -n 10240
 unsetopt BEEP
 alias config='/usr/bin/git --git-dir=/Users/sofiabesenski/.cfg/ --work-tree=/Users/sofiabesenski'
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 eval "$(direnv hook zsh)"
+
+# Maybe to help with pg crashes?
+export PGGSSENCMODE="disable"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
